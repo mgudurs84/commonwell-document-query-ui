@@ -185,7 +185,7 @@ export function AuthenticationSection({
                       <div className="flex items-center gap-1">
                         <Clock className="h-3 w-3 text-muted-foreground" />
                         <span className="text-muted-foreground">Expires:</span>
-                        <Badge variant="outline" size="sm">
+                        <Badge variant="outline">
                           {formatExpiryTime(validationResult.expiresIn)}
                         </Badge>
                       </div>

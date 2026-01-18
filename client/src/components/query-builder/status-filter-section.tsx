@@ -39,7 +39,7 @@ export function StatusFilterSection({
             <RadioGroupItem value="current" id="status-current" data-testid="radio-status-current" />
             <Label htmlFor="status-current" className="text-sm font-normal cursor-pointer flex items-center gap-2">
               Current
-              <Badge variant="secondary" size="sm">Recommended</Badge>
+              <Badge variant="secondary">Recommended</Badge>
             </Label>
           </div>
           <div className="flex items-center space-x-3">

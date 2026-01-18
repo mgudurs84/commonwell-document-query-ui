@@ -42,7 +42,7 @@ export function QueryHistoryPanel({ history, onReload, onClear }: QueryHistoryPa
           <CardTitle className="flex items-center gap-2 text-base font-semibold">
             <History className="h-4 w-4 text-primary" />
             Query History
-            <Badge variant="secondary" size="sm">{history.length}</Badge>
+            <Badge variant="secondary">{history.length}</Badge>
           </CardTitle>
           <Button
             variant="ghost"
@@ -70,13 +70,11 @@ export function QueryHistoryPanel({ history, onReload, onClear }: QueryHistoryPa
                     <div className="flex items-center gap-2 mb-1">
                       <Badge
                         variant={query.environment === "production" ? "default" : "secondary"}
-                        size="sm"
                       >
                         {query.environment === "production" ? "PROD" : "INT"}
                       </Badge>
                       <Badge
                         variant={query.status === "success" ? "outline" : "destructive"}
-                        size="sm"
                       >
                         {query.status}
                       </Badge>

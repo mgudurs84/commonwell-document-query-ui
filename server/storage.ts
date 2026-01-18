@@ -47,8 +47,14 @@ export class MemStorage implements IStorage {
   async addQueryHistory(query: InsertQueryHistory): Promise<QueryHistory> {
     const id = randomUUID();
     const historyEntry: QueryHistory = {
-      ...query,
       id,
+      queryUrl: query.queryUrl,
+      environment: query.environment,
+      patientIdentifier: query.patientIdentifier,
+      parameters: query.parameters,
+      responseTime: query.responseTime ?? null,
+      documentCount: query.documentCount ?? null,
+      status: query.status,
       createdAt: new Date(),
     };
     this.queryHistory.set(id, historyEntry);
